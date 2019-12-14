@@ -38,12 +38,18 @@ optional = true
 libc = "0.2"
 fragile = { version = "0.3", optional = true }
 futures-preview = { version = "0.3.0-alpha", optional = true }
-gdk-pixbuf-sys = "0.9.0"
-glib = "0.8.0"
-glib-sys = "0.9.0"
-gobject-sys = "0.9.0"
-gio-sys = "0.9.0"
-gio = "0.7.0"
+# gdk-pixbuf-sys = "0.9.0"
+gdk-pixbuf-sys = { git = "https://github.com/cthorner/sys", branch = "crate-custom", version = "0.9.0" }
+# glib = "0.8.0"
+glib = { git = "https://github.com/cthorner/glib", branch = "0.8.0-custom", version = "0.8.0" }
+# glib-sys = "0.9.0"
+glib-sys = { git = "https://github.com/cthorner/sys", branch = "crate-custom", version = "0.9.0" }
+# gobject-sys = "0.9.0"
+gobject-sys = { git = "https://github.com/cthorner/sys", branch = "crate-custom", version = "0.9.0" }
+# gio-sys = "0.9.0"
+gio-sys = { git = "https://github.com/cthorner/sys", branch = "crate-custom", version = "0.9.0" }
+# gio = "0.7.0"
+gio = { git = "https://github.com/cthorner/gio", branch="0.7-custom", version="0.7.0", features=["v2_48"] } # per configure.ac
 
 [dev-dependencies]
 gir-format-check = "^0.1"
